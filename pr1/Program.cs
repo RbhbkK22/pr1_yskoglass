@@ -1,3 +1,5 @@
+using pr1.core;
+
 namespace pr1
 {
     internal static class Program

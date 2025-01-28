@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pr1.core;
 
 namespace pr1
 {
-    public partial class Form6 : Form
+    public partial class Form3 : Form
     {
-        public Form6()
+        public Form3()
         {
-            StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
             AppStateHandler.AddClosHandler(this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Text = "Кнопка нажата";
         }
 
         private void backbtn_Click(object sender, EventArgs e)
@@ -30,10 +35,9 @@ namespace pr1
             AppStateHandler.GoToForm(AppStateHandler.CurrentIndex + 1);
         }
 
-        private void Form6_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = new Bitmap("images/peyzagh.jpg");
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
     }
 }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace pr1
+namespace pr1.core
 {
     public static class AppStateHandler
     {
-        private static List<Form> forms = new List<Form> { 
+        private static List<Form> forms = new List<Form> {
             new Form1(),
             new Form2(),
             new Form3(),

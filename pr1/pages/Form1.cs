@@ -1,3 +1,5 @@
+using pr1.core;
+
 namespace pr1
 {
     public partial class Form1 : Form
