@@ -25,17 +25,11 @@ namespace pr1
 
         }
 
-        private void nextbtn_Click(object sender, EventArgs e)
-        {
-            AppStateHandler.GoToForm(AppStateHandler.CurrentIndex + 1);
-        }
-
 
         private void Form9_Load(object sender, EventArgs e)
         {
 
             backbtn.Click += backbtn_Click;
-            nextbtn.Click += nextbtn_Click;
         }
     }
 }
