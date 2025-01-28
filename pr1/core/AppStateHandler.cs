@@ -14,6 +14,8 @@ namespace pr1.core
             new Form5(),
             new Form6(),
             new Form7(),
+            new Form8(),
+            new Form9(),
 
         };
 
