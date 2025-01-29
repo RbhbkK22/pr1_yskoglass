@@ -24,9 +24,9 @@ namespace pr1
 
         }
 
-                private void nextbtn_Click(object? sender, EventArgs e)
+        private void nextbtn_Click(object? sender, EventArgs e)
         {
-            AppStateHandler.GoToForm(AppStateHandler.CurrentIndex - 1);
+            AppStateHandler.GoToForm(AppStateHandler.CurrentIndex + 1);
         }
 
 
