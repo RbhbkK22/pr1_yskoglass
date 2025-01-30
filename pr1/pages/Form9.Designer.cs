@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            backbtn = new Button();
             SuspendLayout();
-            // 
-            // backbtn
-            // 
-            backbtn.Location = new Point(713, 415);
-            backbtn.Name = "backbtn";
-            backbtn.Size = new Size(75, 23);
-            backbtn.TabIndex = 12;
-            backbtn.Text = "<- Back";
-            backbtn.UseVisualStyleBackColor = true;
             // 
             // Form9
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(backbtn);
             Name = "Form9";
             Text = "№ 9 Помазов 185";
             Load += Form9_Load;
@@ -53,7 +42,5 @@
         }
 
         #endregion
-
-        private Button backbtn;
     }
 }

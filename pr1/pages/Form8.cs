@@ -39,12 +39,17 @@ namespace pr1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DrowShpes();
         }
 
         private void DrowShpes()
         {
-            
+            Graphics g = CreateGraphics();
+            Pen redPen = new Pen(Color.Red, 3);
+            g.DrawLine(redPen, 140,170,170,230);
+            g.DrawRectangle(redPen, 50, 60, 150, 60);
+            g.DrawEllipse(redPen, 150, 100, 70, 60);
+            g.Dispose();
         }
     }
 }

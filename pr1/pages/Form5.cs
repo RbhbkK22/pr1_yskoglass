@@ -174,18 +174,37 @@ RadioButton radioButton2;
             }
             else if (e.Node.Text == "DataGridView")
             {
-                DataSet dataSet1 = new DataSet("#@8<5@ DataSet");
-                dataSet1.ReadXml("..//..//images//marks.xml");
+                string filePath = Path.Combine(Application.StartupPath, "images", "marks.xml");
 
-                DataGridView dataGridView1 = new DataGridView();
-                dataGridView1.Width = 250;
-                dataGridView1.Height = 150;
-                dataGridView1.Location = new Point(20, 500);
-                dataGridView1.AutoGenerateColumns = true;
-                dataGridView1.DataSource = dataSet1;
-                dataGridView1.DataMember = "предметы";
-                dataGridView1.DataMember = "оценка";
-                dataGridView1.ColumnCount = 2;
+                if (!File.Exists(filePath))
+                {
+                    MessageBox.Show("Файл не найден: " + filePath);
+                    return;
+                }
+
+                DataSet dataSet1 = new DataSet();
+                dataSet1.ReadXml(filePath);
+
+                DataGridView dataGridView1 = new DataGridView
+                {
+                    Width = 250,
+                    Height = 150,
+                    Location = new Point(20, 500),
+                    AutoGenerateColumns = true,
+                    DataSource = dataSet1
+                };
+
+                // Проверяем, есть ли нужная таблица в DataSet
+                if (dataSet1.Tables.Contains("оценка"))
+                {
+                    dataGridView1.DataMember = "оценка"; // Имя таблицы из XML
+                }
+                else
+                {
+                    MessageBox.Show("В файле XML нет таблицы 'оценка'");
+                    return;
+                }
+
                 panel1.Controls.Add(dataGridView1);
             }
             else if (e.Node.Text == "TabControl")
@@ -249,9 +268,11 @@ RadioButton radioButton2;
             }
             else if (e.Node.Text == "RichTextBox")
             {
+                string filePath = Path.Combine(Application.StartupPath, "images", "marks.xml");
+                // Читаем вручную с принудительной установкой кодировки UTF-8
+                string text = File.ReadAllText(filePath, Encoding.UTF8);
                 RichTextBox richTextBox1 = new RichTextBox();
-                richTextBox1.LoadFile("..//..//images//marks.xml",
-                RichTextBoxStreamType.UnicodePlainText);
+                richTextBox1.Text = text;
                 richTextBox1.WordWrap = false;
                 richTextBox1.BorderStyle = BorderStyle.Fixed3D;
                 richTextBox1.BackColor = Color.Beige;
