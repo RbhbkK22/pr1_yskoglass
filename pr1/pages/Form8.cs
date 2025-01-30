@@ -15,6 +15,7 @@ namespace pr1
     {
         public Form8()
         {
+            StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
             AppStateHandler.AddClosHandler(this);
         }
@@ -36,6 +37,14 @@ namespace pr1
             nextbtn.Click += nextbtn_Click;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void DrowShpes()
+        {
+            
+        }
     }
 }

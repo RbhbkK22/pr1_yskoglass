@@ -39,9 +39,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(215, 188);
+            button1.Location = new Point(246, 251);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(90, 62);
+            button1.Size = new Size(103, 83);
             button1.TabIndex = 0;
             button1.Text = "Нажми на меня";
             button1.UseVisualStyleBackColor = true;
@@ -50,27 +51,30 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
             listBox1.Items.AddRange(new object[] { "Пес", "Степь", "Озеро", "Море", "Океан" });
-            listBox1.Location = new Point(12, 188);
+            listBox1.Location = new Point(14, 251);
+            listBox1.Margin = new Padding(3, 4, 3, 4);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 139);
+            listBox1.Size = new Size(137, 184);
             listBox1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Location = new Point(14, 16);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(479, 170);
+            pictureBox1.Size = new Size(547, 227);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // backbtn
             // 
-            backbtn.Location = new Point(335, 399);
+            backbtn.Location = new Point(383, 532);
+            backbtn.Margin = new Padding(3, 4, 3, 4);
             backbtn.Name = "backbtn";
-            backbtn.Size = new Size(75, 23);
+            backbtn.Size = new Size(86, 31);
             backbtn.TabIndex = 6;
             backbtn.Text = "<- Back";
             backbtn.UseVisualStyleBackColor = true;
@@ -78,9 +82,10 @@
             // 
             // nextbtn
             // 
-            nextbtn.Location = new Point(416, 399);
+            nextbtn.Location = new Point(475, 532);
+            nextbtn.Margin = new Padding(3, 4, 3, 4);
             nextbtn.Name = "nextbtn";
-            nextbtn.Size = new Size(75, 23);
+            nextbtn.Size = new Size(86, 31);
             nextbtn.TabIndex = 5;
             nextbtn.Text = "Next ->";
             nextbtn.UseVisualStyleBackColor = true;
@@ -88,14 +93,15 @@
             // 
             // Form4
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(503, 434);
+            ClientSize = new Size(575, 579);
             Controls.Add(backbtn);
             Controls.Add(nextbtn);
             Controls.Add(pictureBox1);
             Controls.Add(listBox1);
             Controls.Add(button1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form4";
             Text = "№4 Помазов 185";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
